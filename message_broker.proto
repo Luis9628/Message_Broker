@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package message_broker;
+
+service MessageBroker {
+    rpc Publish (PublishRequest) returns (PublishResponse);
+    rpc Subscribe (SubscribeRequest) returns (stream SubscribeResponse);
+    rpc ValidateConnection (ValidateConnectionRequest) returns (ValidateConnectionResponse);
+}
+
+message PublishRequest {
+    string topic = 1;
+    string message = 2;
+}
+
+message PublishResponse {
+    string status = 1;
+}
+
+message SubscribeRequest {
+    string topic = 1;
+}
+
+message SubscribeResponse {
+    string message = 1;
+}
+
+message ValidateConnectionRequest {}
+
+message ValidateConnectionResponse {
+    string status = 1;
+}

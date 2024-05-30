@@ -1,0 +1,60 @@
+30/05/2024:09:09:35 Servidor iniciado
+30/05/2024:09:10:11 Servidor iniciado
+30/05/2024:09:11:41 Servidor iniciado
+30/05/2024:09:12:41 Suscripción desde ipv6:%5B::1%5D:60125 al tema Tema 4
+30/05/2024:09:12:41 Tema no encontrado Tema 4
+30/05/2024:09:12:50 Suscripción desde ipv6:%5B::1%5D:60125 al tema Tema 1
+30/05/2024:09:13:14 Publicación desde ipv6:%5B::1%5D:60125 en el tema Tema 4: Luis hola
+30/05/2024:09:13:14 Exception calling application: 'Tema 4'
+Traceback (most recent call last):
+  File "C:\Users\luisa\AppData\Local\Programs\Python\Python312\Lib\site-packages\grpc\_server.py", line 609, in _call_behavior
+    response_or_iterator = behavior(argument, context)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Fuentes\Message Broker\server.py", line 30, in Publish
+    with self.locks[topic]:
+         ~~~~~~~~~~^^^^^^^
+KeyError: 'Tema 4'
+30/05/2024:09:13:27 Publicación desde ipv6:%5B::1%5D:60125 en el tema Tema 1: Hola luis
+30/05/2024:09:13:27 Mensaje enviado al tema Tema 1
+30/05/2024:09:13:46 Publicación desde ipv6:%5B::1%5D:60125 en el tema djdjdj: djdjd
+30/05/2024:09:13:46 Exception calling application: 'djdjdj'
+Traceback (most recent call last):
+  File "C:\Users\luisa\AppData\Local\Programs\Python\Python312\Lib\site-packages\grpc\_server.py", line 609, in _call_behavior
+    response_or_iterator = behavior(argument, context)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Fuentes\Message Broker\server.py", line 30, in Publish
+    with self.locks[topic]:
+         ~~~~~~~~~~^^^^^^^
+KeyError: 'djdjdj'
+30/05/2024:09:13:54 Publicación desde ipv6:%5B::1%5D:60125 en el tema Tema 1: jsjsjs
+30/05/2024:09:13:54 Mensaje enviado al tema Tema 1
+30/05/2024:09:14:01 Publicación desde ipv6:%5B::1%5D:60125 en el tema Tema 1: hhdsgsgs
+30/05/2024:09:14:01 Mensaje enviado al tema Tema 1
+30/05/2024:09:14:08 Publicación desde ipv6:%5B::1%5D:60125 en el tema Tema 1: agagsgs
+30/05/2024:09:14:08 Mensaje enviado al tema Tema 1
+30/05/2024:09:14:16 Publicación desde ipv6:%5B::1%5D:60125 en el tema Tema 1: hdhdhdhd
+30/05/2024:09:14:16 Mensaje enviado al tema Tema 1
+30/05/2024:09:14:37 Publicación desde ipv6:%5B::1%5D:60125 en el tema Tema 1: cola llena
+30/05/2024:09:14:37 Cola llena para el tema Tema 1
+30/05/2024:09:15:34 Publicación desde ipv6:%5B::1%5D:60152 en el tema Tema 2: Hola
+30/05/2024:09:15:34 Mensaje enviado al tema Tema 2
+30/05/2024:09:17:11 Suscripción desde ipv6:%5B::1%5D:60125 al tema Tema 1
+30/05/2024:09:17:11 Exception iterating responses: name 'name' is not defined
+Traceback (most recent call last):
+  File "C:\Users\luisa\AppData\Local\Programs\Python\Python312\Lib\site-packages\grpc\_server.py", line 653, in _take_response_from_response_iterator
+    return next(response_iterator), True
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Fuentes\Message Broker\server.py", line 51, in Subscribe
+    yield message_broker_pb2.SubscribeResponse(sender=name, message=message)
+                                                      ^^^^
+NameError: name 'name' is not defined
+30/05/2024:09:17:55 Suscripción desde ipv6:%5B::1%5D:60125 al tema Tema 1
+30/05/2024:09:17:55 Exception iterating responses: name 'name' is not defined
+Traceback (most recent call last):
+  File "C:\Users\luisa\AppData\Local\Programs\Python\Python312\Lib\site-packages\grpc\_server.py", line 653, in _take_response_from_response_iterator
+    return next(response_iterator), True
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Fuentes\Message Broker\server.py", line 51, in Subscribe
+    yield message_broker_pb2.SubscribeResponse(sender=name, message=message)
+                                                      ^^^^
+NameError: name 'name' is not defined

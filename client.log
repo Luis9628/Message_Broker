@@ -1,0 +1,12 @@
+30/05/2024:09:09:59 No se pudo conectar con el servidor: Tiempo de espera agotado.
+30/05/2024:09:10:20 Cliente gRPC conectado exitosamente al servidor.
+30/05/2024:09:11:48 Cliente gRPC conectado exitosamente al servidor.
+30/05/2024:09:12:12 Cliente gRPC conectado exitosamente al servidor.
+30/05/2024:09:12:41 Error de red: StatusCode.NOT_FOUND - Tema no encontrado
+30/05/2024:09:12:50 Suscripción exitosa al tema Tema 1.
+30/05/2024:09:13:14 Error de red: StatusCode.UNKNOWN - Exception calling application: 'Tema 4'
+30/05/2024:09:13:46 Error de red: StatusCode.UNKNOWN - Exception calling application: 'djdjdj'
+30/05/2024:09:14:37 Cola llena. No se pudo publicar el mensaje.
+30/05/2024:09:15:17 Cliente gRPC conectado exitosamente al servidor.
+30/05/2024:09:17:12 Error de red: StatusCode.UNKNOWN - Exception iterating responses: name 'name' is not defined
+30/05/2024:09:17:55 Error de red: StatusCode.UNKNOWN - Exception iterating responses: name 'name' is not defined
