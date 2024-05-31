@@ -24,7 +24,7 @@ class MessageBrokerServicer(message_broker_pb2_grpc.MessageBrokerServicer):
     def Publish(self, request, context):
         topic = request.topic
         message = request.message
-        peer = context.peer()  # Obtener información del cliente
+        peer = context.peer() 
         logging.info(f"Publicación desde {peer} en el tema {topic}: {message}")
 
         with self.locks[topic]:
@@ -55,8 +55,8 @@ class MessageBrokerServicer(message_broker_pb2_grpc.MessageBrokerServicer):
             context.abort(grpc.StatusCode.NOT_FOUND, "Tema no encontrado")
 
     def ValidateConnection(self, request, context):
-        peer = context.peer()  # Obtener información del cliente
-        ip_port = peer.split(':')[-1]  # Extraer el puerto
+        peer = context.peer() 
+        ip_port = peer.split(':')[-1]  
         logging.info(f"Cliente conectado desde el puerto {ip_port}")
         return message_broker_pb2.ValidateConnectionResponse(status="Conexión validada")
 
@@ -75,7 +75,6 @@ def serve():
     server.wait_for_termination()
 
 if __name__ == '__main__':
-    # Configuración del logging con FlushFileHandler
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
     handler = FlushFileHandler('server.log')
