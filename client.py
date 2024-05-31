@@ -13,7 +13,6 @@ def run_client():
                 logging.info("Cliente gRPC conectado exitosamente al servidor.")
 
                 while True:
-                    # Seleccionar si es publicador, subscriptor o salir
                     user_type = input("Seleccione 'p' para publicador, 's' para subscriptor o 'q' para salir: ")
                     if user_type == 'p':
                         name = input("Ingrese su nombre: ")
