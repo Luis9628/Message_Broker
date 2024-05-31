@@ -7,7 +7,7 @@ def run_client():
     try:
         with grpc.insecure_channel('localhost:50051') as channel:
             try:
-                grpc.channel_ready_future(channel).result(timeout=10)  # Verificar si el servidor está arriba
+                grpc.channel_ready_future(channel).result(timeout=10)  
                 stub = message_broker_pb2_grpc.MessageBrokerStub(channel)
                 print("Cliente gRPC iniciado. Puede comenzar a enviar mensajes.")
                 logging.info("Cliente gRPC conectado exitosamente al servidor.")
@@ -85,7 +85,7 @@ def subscribe_to_topic(stub, topic, name):
         print(f"Error de red: {e.code()} - {e.details()}")
 
 if __name__ == '__main__':
-    # Configuración del logging con FlushFileHandler
+    
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
     handler = logging.FileHandler('client.log')  # Cambiar el nombre del archivo si es necesario
@@ -93,5 +93,4 @@ if __name__ == '__main__':
     handler.setFormatter(formatter)
     logger.addHandler(handler)
 
-    # Ejecuta el cliente interactivo
     run_client()
